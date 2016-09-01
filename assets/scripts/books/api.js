@@ -16,7 +16,24 @@ const show = function (id) {
   });
 };
 
+const create = function (data) {
+  return $.ajax({
+    url: app.host + '/books',
+    method: 'POST',
+    data: data,
+  });
+};
+
+const destroy = function (id) {
+  return $.ajax({
+    url: app.host + '/books/' + id,
+    method: 'DELETE',
+  });
+};
+
 module.exports = {
   index,
   show,
+  create,
+  destroy
 };

@@ -13,11 +13,16 @@ const onSuccess = function (data) {
   }
 };
 
+const onDeleteSuccess = function () {
+  console.log("Successfully deleted book.");
+};
+
 const onError = function (response) {
   console.error(response);
 };
 
 module.exports = {
   onSuccess,
-  onError
+  onError,
+  onDeleteSuccess
 };
