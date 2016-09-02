@@ -27,8 +27,8 @@ const onCreateBook = function (event) {
   let data = getFormFields(event.target);
 
   api.create(data)
-    .done()
-    .fail();
+    .done(ui.onSuccess)
+    .fail(ui.onError);
 };
 
 
